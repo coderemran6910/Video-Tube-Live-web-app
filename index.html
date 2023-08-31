@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tube mate dynamic website</title>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/a953fa5022.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="./project resources/fav.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Inter';
+        }
+       
+        #card{
+            box-shadow: -2px 2px 28px 2px rgba(43,39,39,0.85);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="container mx-auto">
+        <div class="navbar bg-base-100 py-5">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <!-- menu center items -->
+                    <div class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <button class="btn btn-active btn-ghost w-24 md:w-32 bg-slate-300">Sort by view</button>
+                    </div>
+                </div>
+                <a class="btn btn-ghost normal-case text-xl"><img src="./project resources/Logo.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <div>
+                    <button class="btn btn-active btn-ghost">Sort by view</button>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <a href="./blogPage.html" class="btn bg-red-600 text-white hover:text-black hover:bg-red-400">Blog</a>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Dynamic categories -->
+        <div id="categories" class="flex gap-2 p-2 justify-center mt-5">
+
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Dynamic Categories posts -->
+        <div id="allPosts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto my-14 justify-items-center items-center">
+            <!-- <div class="card card-compact  bg-base-100 shadow-xl">
+                <figure class="w-80 h-[200px]"><img class="w-full  max-h-full"  src="${category.thumbnail}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <div class="flex gap-4"> 
+                        <div> 
+                        <img src="" alt="">
+                        </div> 
+                        <div>
+                            <h2>Building a Winning UX Strategy Using the Kano Model</h2>
+                        </div> 
+                    </div>
+                    <h3>Awlad Hossain <span> blue icon</span></h3>
+                    <p>91K views</p>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
