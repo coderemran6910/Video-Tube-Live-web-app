@@ -20,7 +20,7 @@ const loadCategories = async() => {
 const loadPostById =async(id) =>{
 try {
 
-    console.log(id);
+    // console.log(id);
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`);
     const data = await response.json();
     const allCategoriesData = data.data;
@@ -30,20 +30,21 @@ try {
 
     // Sort by view handle
     const sortByView = document.getElementById('sortByView');
-    sortByView.addEventListener('click', () => {
-       const sortedData = allCategoriesData.sort((a,b) => {
-           a = a?.others?.views;
-           a = parseFloat(a.replace("K",""));
-
-           b = b?.others?.views;
-           b = parseFloat(b.replace("K",""));
-           return b - a;
-          
-       })
-      renderCard(sortedData);
-       
-       
-    })
+    const sortByViewSM = document.getElementById('sortByViewSM');
+    const sortedData =() => {
+        const sortedData = allCategoriesData.sort((a,b) => {
+            a = a?.others?.views;
+            a = parseFloat(a.replace("K",""));
+ 
+            b = b?.others?.views;
+            b = parseFloat(b.replace("K",""));
+            return b - a;
+           
+        })
+       renderCard(sortedData); 
+     }
+    sortByView.addEventListener('click', sortedData);
+    sortByViewSM.addEventListener('click', sortedData);
 
 
     
@@ -72,12 +73,23 @@ try {
        errorContent.innerHTML = ""
    }
 
+
+
         withOutSortData.forEach(category => {
+
+            // sec to hour:min:sec
+            const seconds = category?.others?.posted_date;
+            const hour = Math.floor(seconds / 3600);
+            const minites = Math.floor((seconds % 3600) / 60);
+            const actualDate = `${hour}hrs ${minites}min ago`;
+            // console.log(actualDate);
+
             const card = document.createElement('div'); 
             card.innerHTML=`
             <div id="card" class="card card-compact bg-base-100 shadow-xl w-80">
-            <figure class="w-80 h-[200px]">
+            <figure class="w-80 h-[200px] relative">
                 <img class="w-full h-full" src="${category.thumbnail}" />
+                <div class="absolute bottom-3 right-3 p-3 text-white bg-black px-4 py-2 rounded-md text-xs font-normal"> ${actualDate? actualDate : ""} </div>
             </figure>
             <div class="card-body">
     
@@ -124,3 +136,11 @@ loadPostById('1000')
 
 // category call function
 loadCategories()
+
+
+const totalSeconds = 1672656000;
+const hours = Math.floor(totalSeconds / 3600);
+const remainingSeconds = totalSeconds % 3600;
+const minutes = Math.floor(remainingSeconds / 60);
+
+console.log(`Hours: ${hours}, Minutes: ${minutes}`);
