@@ -11,56 +11,89 @@
 </head>
 
 <body>
-    <h1 class="text-5xl font-bold border w-96 rounded-md text-center my-10 mx-auto border-red-600 text-red-600 p-3">Blog page</h1>
-   <div class="accordion px-20">
-    <div class="collapse collapse-plus bg-base-200">
-        <input type="radio" name="my-accordion-3" checked="checked" /> 
-        <div class="collapse-title text-xl font-medium">
-          Discuss the scope of `var`, `let`, and `const`?
-        </div>
-        <div class="collapse-content"> 
-          <p>Sure, I'd be happy to discuss the scope of var, let, and const in JavaScript. These are three different ways to declare variables, and they have distinct scoping rules and behaviors.
-         </p>
-         <p><span class="font-bold">var:</span>
-            Variables declared with var are function-scoped or globally-scoped.
-            They are hoisted to the top of their function or global context, which means you can access them before they are declared.
-            If a var variable is declared within a block (inside if statements or loops), it's still accessible outside of that block, which can lead to unintended bugs.
-            var variables can be redeclared within the same scope without any error.</p>
+    <h1 class="text-5xl font-bold border w-96 rounded-md text-center my-10 mx-auto border-red-600 text-red-600 p-3">Blog
+        page</h1>
+    <div class="accordion px-20">
+        <div class="collapse collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+                <strong class="text-red-600">Question:</strong> Discuss the scope of `var`, `let`, and `const`?
+            </div>
+            <div class="collapse-content mb-10 p-10 bg-slate-400 rounded-md shadow-lg shadow-black">
+                <p><strong>Ans:</strong> Sure, I'd be happy to discuss the scope of var, let, and const in JavaScript.
+                    These are three different ways to declare variables, and they have distinct scoping rules and
+                    behaviors.
+                </p>
+                <p><span class="font-bold">var:</span>
+                    Variables declared with var are function-scoped or globally-scoped.
+                    They are hoisted to the top of their function or global context, which means you can access them
+                    before they are declared.
+                    If a var variable is declared within a block (inside if statements or loops), it's still accessible
+                    outside of that block, which can lead to unintended bugs.
+                    var variables can be redeclared within the same scope without any error.</p>
 
-            <p>
-              <span>let:</span>
+                <p>
+                    <span>let:</span>
 
-Variables declared with let are block-scoped.
-They are not hoisted to the top of the block but only to the top of their current scope.
-let variables can be reassigned, but not redeclared within the same scope.
-They provide better scoping and prevent accidental variable leaks from blocks.
-            </p>
+                    Variables declared with let are block-scoped.
+                    They are not hoisted to the top of the block but only to the top of their current scope.
+                    let variables can be reassigned, but not redeclared within the same scope.
+                    They provide better scoping and prevent accidental variable leaks from blocks.
+                </p>
+            </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-200">
-        <input type="radio" name="my-accordion-3" /> 
-        <div class="collapse-title text-xl font-medium">
-            Tell us the use cases of `null` and `undefined ? `
-        </div>
-        <div class="collapse-content"> 
-          <p>hello</p>
-        </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-200">
-        <input type="radio" name="my-accordion-3" /> 
-        <div class="collapse-title text-xl font-medium">
-            What do you mean by REST API?
+        <div class="collapse collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">
+                <strong class="text-red-600">Question:</strong> Tell us the use cases of `null` and `undefined ? `
+            </div>
+            <div class="collapse-content mb-10 p-10 bg-slate-400 rounded-md shadow-lg shadow-black">
+                <p><strong>Ans:</strong> null and undefined are special values in JavaScript that represent the absence
+                    or lack of a value. However, they are used in slightly different contexts. Here are the use cases
+                    for each:</p>
+                <p>
+                    <b> undefined:</b>
 
+                    undefined is a primitive value that indicates a variable has been declared but has not been assigned
+                    a value.
+                    It is the default value of variables that have been declared but not initialized.
+                    It's also what a function returns if there is no explicit return value.
+                </p>
+             
+                <p>
+                    <b>null:</b>
+
+                    null is also a primitive value that represents the intentional absence of any value or an empty
+                    value.
+                    It's often used to indicate that a variable intentionally does not have a value.
+                    It's a way to explicitly assign "nothing" to a variable.
+                </p>
+                <p>
+                    In summary, undefined is usually the default value for uninitialized variables and the absence of
+                    return values, while null is often used to explicitly indicate the absence of a value or to reset a
+                    variable to no value. It's important to use these values correctly to ensure your code's behavior is
+                    clear and intentional.
+                </p>
+            </div>
         </div>
-        <div class="collapse-content"> 
-          <p>hello</p>
+        <div class="collapse collapse-plus bg-base-200">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">
+                <strong class="text-red-600">Question:</strong> What do you mean by REST API?
+
+            </div>
+            <div class="collapse-content mb-10 p-10 bg-slate-400 rounded-md shadow-lg shadow-black">
+                <p> <strong>Ans:</strong> REST stands for "Representational State Transfer," and it is an architectural
+                    style or set of constraints for designing networked applications. A RESTful API (Application
+                    Programming Interface) is an API that adheres to the principles of REST, allowing communication
+                    between different software applications over the internet.</p>
+            </div>
         </div>
-      </div>
-   </div>
+    </div>
 
 
 
-   
+
 
 
 
